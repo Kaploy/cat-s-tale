@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public Animator transitionAnim;
     public int nextScene;
+    public float transitionTime = 3.5f;
 
     public void PlayGame()
     {
@@ -23,7 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         transitionAnim.SetTrigger("Finish");
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(nextScene);
     }

@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 1226749244}
   nextScene: 1
+  transitionTime: 3.5
 --- !u!1 &1097092800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,22 @@ PrefabInstance:
     - target: {fileID: 549426398034065883, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
       propertyPath: m_Name
       value: TransitionCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424016776789086636, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464760869022431788, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
+      propertyPath: m_text
+      value: No dia em que eu te conheci...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464760869022431788, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464760869022431788, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
