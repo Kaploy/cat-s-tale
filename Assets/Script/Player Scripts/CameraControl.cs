@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour
 
     float xRotation = 0f;
 
+    public Transform startingTarget;
     private Vector2 turn;
 
     [Range(0f,1000f)] public float sensitivity;
@@ -16,14 +17,13 @@ public class CameraControl : MonoBehaviour
     private Vector3 deltaMove;
 
     void Start()
-
     {
-
+        transform.LookAt(startingTarget);
         Cursor.lockState = CursorLockMode.Locked;
 
     }
 
-    void LateUpdate()
+    void Update()
 
     {
 
