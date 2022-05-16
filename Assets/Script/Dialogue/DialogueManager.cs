@@ -6,14 +6,14 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
+    //public TextMeshProUGUI nameText;
+    public Text dialogueText;
 
     public Animator textAnimator;
 
     private Queue<string> sentences;
 
-    void Start()
+    void Awake()
     {
         sentences = new Queue<string>();
     }

@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: f2e8a438902cb7748b378c4c2884ad45
-  - enabled: 0
-    path: Assets/Scenes/Cena_Teste-01 1.unity
-    guid: 8cdca1c6ede45f448bbb9b05df9c8689
   - enabled: 1
     path: Assets/Scenes/CENA TESTE.unity
     guid: f6f1534192fa5204f8b87878a13019b2
-  - enabled: 0
-    path: Assets/Scenes/Cena_Teste-03.unity
-    guid: be3dda97b9a8a894b9f213e3ef584891
   - enabled: 1
     path: Assets/Scenes/CENA TESTE 1.unity
     guid: 96dca0f736312c14da4f8dd0dcbdb0a6
   - enabled: 1
     path: Assets/Scenes/CENA TESTE 2.unity
     guid: 49461e3d44dd8644a98c137923744ef4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

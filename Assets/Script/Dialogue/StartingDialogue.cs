@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class StartingDialogue : MonoBehaviour
 {
-    public Dialogue starterDialogue;
+    public Dialogue dialogue;
 
     private void Start()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(starterDialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }
