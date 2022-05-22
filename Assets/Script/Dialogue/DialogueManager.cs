@@ -6,60 +6,58 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    //public TextMeshProUGUI nameText;
-    public Text dialogueText;
+    public TextMeshProUGUI dialogueText;
+    public string[] lines;
 
-    public Animator textAnimator;
+    public float textSpeed;
 
-    private Queue<string> sentences;
-
-    void Awake()
-    {
-        sentences = new Queue<string>();
-    }
+    private int index;
+    public GameObject dialogueBox;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            DisplayNextSentence();
+            if(dialogueText.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                dialogueText.text = lines[index];
+            }
+        }
+    }
+    public void StartDialogue()
+    {
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator TypeLine()
+    {
+        foreach(char c in lines[index].ToCharArray())
+        {
+            dialogueText.text += c;
+            yield return new WaitForSeconds(textSpeed);
+
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    void NextLine()
     {
-        textAnimator.SetBool("IsOpen", true);
-        //nameText.text = dialogue.name;
-
-        sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
+        if(index < lines.Length - 1)
         {
-            sentences.Enqueue(sentence);
-
-            DisplayNextSentence();
-        }
-
-    }
-
-    
-    public void DisplayNextSentence()
-    {
-        if(sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
+            index++;
+            dialogueText.text = string.Empty;
+            StartCoroutine(TypeLine());
         }
         else
         {
-            string sentence = sentences.Dequeue();
+            dialogueBox.SetActive(false);
+
         }
     }
-
-    void EndDialogue()
-    {
-        textAnimator.SetBool("IsOpen", false);
-    }
-
 }
 

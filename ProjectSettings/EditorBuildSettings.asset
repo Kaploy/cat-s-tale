@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: f2e8a438902cb7748b378c4c2884ad45
   - enabled: 1
-    path: Assets/Scenes/CENA TESTE.unity
+    path: Assets/Scenes/Fase 1.unity
     guid: f6f1534192fa5204f8b87878a13019b2
   - enabled: 1
-    path: Assets/Scenes/CENA TESTE 1.unity
+    path: Assets/Scenes/Fase 2.unity
     guid: 96dca0f736312c14da4f8dd0dcbdb0a6
   - enabled: 1
-    path: Assets/Scenes/CENA TESTE 2.unity
+    path: Assets/Scenes/Fase 3.unity
     guid: 49461e3d44dd8644a98c137923744ef4
   - enabled: 0
     path: 
