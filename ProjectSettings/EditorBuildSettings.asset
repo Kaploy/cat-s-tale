@@ -13,14 +13,11 @@ EditorBuildSettings:
     guid: f6f1534192fa5204f8b87878a13019b2
   - enabled: 1
     path: Assets/Scenes/Fase 2.unity
-    guid: 96dca0f736312c14da4f8dd0dcbdb0a6
+    guid: cb4e29af0948c9b4ab463d0aa2041cc1
   - enabled: 1
     path: Assets/Scenes/Fase 3.unity
-    guid: 49461e3d44dd8644a98c137923744ef4
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    guid: cb3f4176da3492a4ea78c1c4f066e1a1
+  - enabled: 1
+    path: Assets/Scenes/Build ended menu.unity
+    guid: 8f1d00596df237645811ef1062a86eb9
   m_configObjects: {}
