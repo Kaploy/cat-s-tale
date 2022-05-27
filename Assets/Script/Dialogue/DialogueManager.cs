@@ -6,58 +6,68 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
-    public string[] lines;
+	public TextMeshProUGUI nameText;
+	public TextMeshProUGUI dialogueText;
+	public GameObject dialogueBox;
 
-    public float textSpeed;
+	//public Animator animator;
 
-    private int index;
-    public GameObject dialogueBox;
+	private Queue<string> sentences;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if(dialogueText.text == lines[index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                dialogueText.text = lines[index];
-            }
-        }
-    }
-    public void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
-    }
+	// Use this for initialization
+	void Start()
+	{
+		sentences = new Queue<string>();
+	}
 
-    IEnumerator TypeLine()
-    {
-        foreach(char c in lines[index].ToCharArray())
-        {
-            dialogueText.text += c;
-            yield return new WaitForSeconds(textSpeed);
+	public void StartDialogue(Dialogue dialogue)
+	{
+		//animator.SetBool("IsOpen", true);
+		dialogueBox.SetActive(true);
+		nameText.text = dialogue.name;
 
-        }
-    }
+		sentences.Clear();
 
-    void NextLine()
-    {
-        if(index < lines.Length - 1)
-        {
-            index++;
-            dialogueText.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            dialogueBox.SetActive(false);
+		foreach (string sentence in dialogue.sentences)
+		{
+			sentences.Enqueue(sentence);
+		}
 
-        }
-    }
+        if (Input.GetKeyDown(KeyCode.E)) 
+		{
+			DisplayNextSentence();
+		}
+        
+	}
+
+	public void DisplayNextSentence()
+	{
+		if (sentences.Count == 0)
+		{
+			EndDialogue();
+			return;
+		}
+
+		string sentence = sentences.Dequeue();
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
+	}
+
+	IEnumerator TypeSentence(string sentence)
+	{
+		dialogueText.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			dialogueText.text += letter;
+			yield return null;
+		}
+	}
+
+	void EndDialogue()
+	{
+		dialogueBox.SetActive(false);
+		//animator.SetBool("IsOpen", false);
+	}
+
 }
 

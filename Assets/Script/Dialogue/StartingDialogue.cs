@@ -5,9 +5,9 @@ using UnityEngine;
 public class StartingDialogue : MonoBehaviour
 {
     public Dialogue dialogue;
-
+    public DialogueManager dialogueManager;
     private void Start()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue();
+        dialogueManager.StartDialogue(dialogue);
     }
 }
