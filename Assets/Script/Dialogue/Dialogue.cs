@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    // Start is called before the first frame update
-    public string name;
+    [SerializeField] List<string> lines;
 
-
-    [TextArea(1, 5)]
-    public string[] sentences;
+    public List<string> Lines
+    {
+        get { return lines; }
+    }
 
 }

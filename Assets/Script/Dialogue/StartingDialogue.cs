@@ -8,6 +8,6 @@ public class StartingDialogue : MonoBehaviour
     public DialogueManager dialogueManager;
     private void Start()
     {
-        dialogueManager.StartDialogue(dialogue);
+        //dialogueManager.StartDialogue(dialogue);
     }
 }

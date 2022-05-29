@@ -5,15 +5,14 @@ using TMPro;
 
 public class CommentInteractionTest : Interactable
 {
-
-    public Dialogue dialogue;
-    public GameObject dialogueBox;
-    public TextMeshProUGUI commentText;
-    public string interactionComment;
-    public float commentDuration;
+    [SerializeField] string interactionName;
+    [SerializeField] GameObject dialogueBox;
+    [SerializeField] TextMeshProUGUI commentText;
+    [SerializeField] string interactionComment;
+    [SerializeField] float commentDuration;
     public override string GetDescription()
     {
-        return "Examine";
+        return interactionName;
     }
     
     public override void Interact() 
