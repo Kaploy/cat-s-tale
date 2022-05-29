@@ -20,8 +20,8 @@ public class LightSwitch : Interactable
 
     public override string GetDescription()
     {
-        if (isOn) return "Press [E] to turn <color=red>off</color> the light.";
-        return "Press [E] to turn <color=green>on</color> the light.";
+        if (isOn) return "Lights (On)";
+        return "Lights (Off)";
     }
 
     public override void Interact()
