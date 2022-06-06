@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
 
     }
 
-    void Update()
+    public void ControlUpdate()
 
     {
 

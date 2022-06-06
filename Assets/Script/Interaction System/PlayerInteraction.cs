@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ControlUpdate()
     {
         Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         RaycastHit hit;
