@@ -24100,6 +24100,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.241
       objectReference: {fileID: 0}
+    - target: {fileID: 6296539779173327751, guid: ccc7de9eeaa84324fa1ecb79f01adeb6, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6296539780286716849, guid: ccc7de9eeaa84324fa1ecb79f01adeb6, type: 3}
       propertyPath: m_Name
       value: Player Controller
