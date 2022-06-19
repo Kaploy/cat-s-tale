@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField] TextMeshProUGUI dialogueText;
 	[SerializeField] GameObject dialogueBox;
 	[SerializeField] float lettersPerSecond;
+	[SerializeField] GameObject objectImage;
 	public GameObject playerController;
 	bool dialogueOpen = false;
 	int currentLine = 0;
@@ -30,7 +31,7 @@ public class DialogueManager : MonoBehaviour
 		OnShowDialogue?.Invoke();
 		this.dialogue = dialogue;
 
-		
+		objectImage.SetActive(true);
 		dialogueBox.SetActive(true);
 		StartCoroutine(TypeDialogue(dialogue.Lines[0]));
 
@@ -48,7 +49,7 @@ public class DialogueManager : MonoBehaviour
 
 			else
 			{
-				
+				objectImage.SetActive(false);
 				dialogueBox.SetActive(false);
 				OnCloseDialogue?.Invoke();
 				currentLine = 0;
