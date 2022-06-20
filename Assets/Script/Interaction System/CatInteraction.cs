@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class CatInteraction : Interactable
 {
     public Animator transitionAnim;
-    float transitionTime = 2f;
+    [SerializeField] float transitionTime;
     [SerializeField] string textDescription;
+    [SerializeField] string finishLevelTrigger;
     // Start is called before the first frame update
     public override string GetDescription()
     {
@@ -21,7 +22,7 @@ public class CatInteraction : Interactable
 
     IEnumerator LoadLevel(int nextScene)
     {
-        transitionAnim.SetTrigger("Finish");
+        transitionAnim.SetTrigger(finishLevelTrigger);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(nextScene);
     }

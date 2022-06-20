@@ -5,9 +5,15 @@ using UnityEngine;
 public class StartingDialogue : MonoBehaviour
 {
     public Dialogue dialogue;
-    public DialogueManager dialogueManager;
+  
     private void Start()
     {
-        //dialogueManager.StartDialogue(dialogue);
+        StartCoroutine(StarterDialogue());
+    }
+
+    IEnumerator StarterDialogue()
+    {
+        yield return new WaitForSeconds(2f);
+        DialogueManager.Instance.ShowDialogue(dialogue);
     }
 }
