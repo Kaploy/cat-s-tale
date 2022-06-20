@@ -20,8 +20,8 @@ public class LightSwitch : Interactable
 
     public override string GetDescription()
     {
-        if (isOn) return "Lights (On)";
-        return "Lights (Off)";
+        if (isOn) return "Luz (Ligada)";
+        return "Luz (Desligada)";
     }
 
     public override void Interact()
