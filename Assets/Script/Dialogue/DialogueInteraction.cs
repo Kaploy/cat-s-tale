@@ -24,6 +24,10 @@ public class DialogueInteraction : Interactable
         {
             objectImage.sprite = inspectedObject;
         }
+        else
+        {
+
+        }
         
         DialogueManager.Instance.ShowDialogue(dialogue);
 
