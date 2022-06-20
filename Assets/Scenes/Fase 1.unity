@@ -16602,7 +16602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   transitionAnim: {fileID: 1262571331}
-  textDescription: 
+  textDescription: Acalmar o gatinho
 --- !u!64 &1010428589
 MeshCollider:
   m_ObjectHideFlags: 0
