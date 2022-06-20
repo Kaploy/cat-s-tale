@@ -13568,7 +13568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   transitionAnim: {fileID: 1262571331}
-  transitionTime: 3
+  transitionTime: 4.5
   textDescription: Acalmar o gatinho
   finishLevelTrigger: FinishLevel1
 --- !u!65 &850131422

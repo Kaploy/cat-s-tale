@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.9245283, g: 0.8627194, b: 0.6672303, a: 1}
+  m_AmbientSkyColor: {r: 0.9811321, g: 0.9335136, b: 0.5970096, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.8679245, g: 0.63057035, b: 0.5854396, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: bbbcd551076325545ba102ba8c308520, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6225fa8890cf025489e57d3aa1d87260, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 205819949}
-  m_IndirectSpecularColor: {r: 0.22277963, g: 0.71050745, b: 0.78237534, a: 1}
+  m_IndirectSpecularColor: {r: 0.28745338, g: 0.8098233, b: 0.7327864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2391,7 +2391,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9622642, g: 0.87358797, b: 0.5582948, a: 1}
+  m_Color: {r: 1, g: 0.94925326, b: 0.5330188, a: 1}
   m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
@@ -2449,13 +2449,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205819948}
-  m_LocalRotation: {x: 0.09403131, y: 0.86842394, z: -0.18063247, w: 0.4520729}
+  m_LocalRotation: {x: 0.31614745, y: 0.6464971, z: -0.60731363, w: 0.33654508}
   m_LocalPosition: {x: 0, y: -0.07146764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 37
-  m_LocalEulerAnglesHint: {x: 23.5, y: 125, z: 0}
+  m_LocalEulerAnglesHint: {x: 86.42, y: 125, z: 0}
 --- !u!1 &206553703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,7 +5401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8464760869022431788, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
       propertyPath: m_text
-      value: "Voc\xEA estava com muito medo... Mas confiou em mim."
+      value: "Eu n\xE3o sabia cuidar de voc\xEA, mas mesmo assim se tornou meu amigo."
       objectReference: {fileID: 0}
     - target: {fileID: 8464760869022431788, guid: 961dcc06c716d224fb35b9468a3e8901, type: 3}
       propertyPath: m_fontSize
@@ -27600,7 +27600,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   transitionAnim: {fileID: 1262571331}
+  transitionTime: 6.5
   textDescription: Pegar Gato
+  finishLevelTrigger: FinishLevel2
 --- !u!1 &1671271348
 GameObject:
   m_ObjectHideFlags: 0
@@ -29967,7 +29969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1793753577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31348,6 +31350,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 545295840}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881504633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881504635}
+  - component: {fileID: 1881504634}
+  m_Layer: 0
+  m_Name: StartingDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1881504634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881504633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d749e645332f8e46948ccbd0e0d9d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Peguei tudo pra irmos pra praia...
+    - "Agora s\xF3 falta achar o gatinho."
+--- !u!4 &1881504635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881504633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.98102, y: 0.5136576, z: 35.42501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887236387
 GameObject:
@@ -33005,7 +33054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 0
-  interactionName: Door
+  interactionName: Porta
   comment: {fileID: 444646437}
   commentText: {fileID: 1410808101}
   interactionComment: "Ela quase n\xE3o sai do quarto ultimamente"
@@ -36433,25 +36482,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5681291932062729310, guid: d509882ed67703149b0b89f31d44f5ac, type: 3}
---- !u!1 &2123503904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: faf07392285b92a44a9b0a845fe4a8db, type: 3}
-  m_PrefabInstance: {fileID: 1428147360}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2123503906
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123503904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2134068311
 GameObject:
   m_ObjectHideFlags: 0
