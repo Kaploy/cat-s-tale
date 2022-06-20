@@ -16,11 +16,11 @@ public class Special_Bathroom_DoorInteraction : Interactable
     {
         if (!doorOpen)
         {
-            return "Door(Open)";
+            return "Porta(abrir)";
         }
         else
         {
-            return "Door(Close)";
+            return "Porta(fechar)";
         }
 
     }
@@ -36,7 +36,7 @@ public class Special_Bathroom_DoorInteraction : Interactable
         else
         {
 
-            doorAnim.Play("door_closing");
+            doorAnim.Play("door_closing_firstlevel");
             doorOpen = false;
         }
 

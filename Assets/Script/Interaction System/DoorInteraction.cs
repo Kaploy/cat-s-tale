@@ -16,11 +16,11 @@ public class DoorInteraction : Interactable
     {
         if (!doorOpen)
         {
-            return "Door(Open)";
+            return "Porta(Abrir)";
         }
         else
         {
-            return "Door(Close)";
+            return "Porta(Fechar)";
         }
 
     }

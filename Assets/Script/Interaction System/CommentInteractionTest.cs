@@ -6,7 +6,7 @@ using TMPro;
 public class CommentInteractionTest : Interactable
 {
     [SerializeField] string interactionName;
-    [SerializeField] GameObject dialogueBox;
+    [SerializeField] GameObject comment;
     [SerializeField] TextMeshProUGUI commentText;
     [SerializeField] string interactionComment;
     [SerializeField] float commentDuration;
@@ -23,8 +23,8 @@ public class CommentInteractionTest : Interactable
 
     IEnumerator ShowComment()
     {
-        dialogueBox.SetActive(true);
+        comment.SetActive(true);
         yield return new WaitForSeconds(commentDuration);
-        dialogueBox.SetActive(false);
+        comment.SetActive(false);
     }
 }
