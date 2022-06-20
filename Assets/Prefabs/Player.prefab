@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTarget: {fileID: 0}
-  sensitivity: 259
+  sensitivity: 100
 --- !u!114 &6296539780286716863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6296539780286716856}
-  speed: 3.8
+  speed: 2.2
   gravity: -9.81
   groundCheck: {fileID: 6296539778963036752}
   groundDistance: 0.4
